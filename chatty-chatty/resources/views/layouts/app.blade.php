@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-white" >
-    <nav class="p-6 bg-white border-b-2 flex justify-between" >
+    <nav class="p-6 mb-10 bg-white border-b-2 flex justify-between" >
         <ul class="flex items-center" >
             <li class="mr-5" >
                 <a href="">Home</a>
