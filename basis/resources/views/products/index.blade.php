@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>Products</h1>
+    @foreach ($data as $item)
+        <p>
+            {{ $item }}
+        </p>
+    @endforeach
+    {{-- <p>{{ $title }}</p> --}}
+    {{-- <p>{{ $description }}</p> --}}
 </body>
 </html>
