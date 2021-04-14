@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,30 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Return a view when the URL is reached
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-// Return a string when the URL is reached
-Route::get('/users', function () {
-    return 'Users page';
-});
+// Laravel 8
+Route::get('/products', [ProductsController::class, 'index']);
+Route::get('/products/about', [ProductsController::class, 'about']);
+// Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
-// Returned as JSON by default
-Route::get('/users', function () {
-    return ['PHP', 'Laravel'];
-});
-
-//Return JSON 
-Route::get('/users', function () {
-    return response()->json([
-        'name' => 'nuni',
-        'journey' => 'Foetus to Advanced'
-    ]);
-});
-
-//Redirect function when the URL is reached
-Route::get('/users', function () {
-    return redirect('/');
-});
+// Larevel 8-
+// Route::get('/products', 'ProductsController@index');
